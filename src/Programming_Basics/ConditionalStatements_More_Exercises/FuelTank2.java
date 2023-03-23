@@ -6,134 +6,38 @@ public class FuelTank2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String fuelType = scanner.nextLine();
-        double litresFuel = Double.parseDouble(scanner.nextLine());
+        double litres = Double.parseDouble(scanner.nextLine());
         String clubCard = scanner.nextLine();
-        double priceForFuel = 0.0;
-        double priceForFuelWithDiscount = 0.0;
-        double priceforFuelWithoutDiscount = 0.0;
+        double price = 0;
         switch (fuelType) {
             case "Gas":
                 if (clubCard.equals("Yes")) {
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 0.93 - litresFuel * 0.08;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 0.93 - litresFuel * 0.08;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceForFuel = litresFuel * 0.93 - litresFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuel);
-                        break;
-                    }
+                    price +=  0.85;
+                } else {
+                    price +=  0.93;
                 }
-        }
-        switch (fuelType) {
-            case "Gas":
-                if (clubCard.equals("No")){
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 0.93;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 0.93;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceforFuelWithoutDiscount = litresFuel * 0.93;
-                        System.out.printf("%.2f lv.", priceforFuelWithoutDiscount);
-                    }
-                    break;
-                }
-        }
-        switch (fuelType) {
+                break;
             case "Gasoline":
-                if (clubCard.equals("Yes")){
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 2.22 - litresFuel * 0.18;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 2.22 - litresFuel * 0.18;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceForFuel = litresFuel * 2.22 - litresFuel * 0.18;
-                        System.out.printf("%.2f lv.", priceForFuel);
-                        break;
-                    }
+                if (clubCard.equals("Yes")) {
+                    price +=  2.04;
+                } else {
+                    price += 2.22;
                 }
-        }
-        switch (fuelType) {
-            case "Gasoline":
-                if (clubCard.equals("No")) {
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 2.22;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 2.22;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceforFuelWithoutDiscount = litresFuel * 2.22;
-                        System.out.printf("%.2f lv.", priceforFuelWithoutDiscount);
-                        break;
-                    }
-                }
-        }
-        switch (fuelType) {
+                break;
             case "Diesel":
                 if (clubCard.equals("Yes")) {
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 2.33 - litresFuel * 0.12;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 2.33 - litresFuel * 0.12;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceForFuel = litresFuel * 2.33 - litresFuel * 0.12;
-                        System.out.printf("%.2f lv.", priceForFuel);
-                        break;
-                    }
+                    price += 2.21;
+                } else {
+                    price += 2.33;
                 }
+                break;
         }
-        switch (fuelType) {
-            case "Diesel":
-                if (clubCard.equals("No")) {
-                    if (litresFuel >= 20 && litresFuel <= 25) {
-                        priceForFuel = litresFuel * 2.33;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.08;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel > 25) {
-                        priceForFuel = litresFuel * 2.33;
-                        priceForFuelWithDiscount = priceForFuel - priceForFuel * 0.10;
-                        System.out.printf("%.2f lv.", priceForFuelWithDiscount);
-                    }
-                    else if (litresFuel < 20) {
-                        priceforFuelWithoutDiscount = litresFuel * 2.33;
-                        System.out.printf("%.2f lv.", priceforFuelWithoutDiscount);
-                        break;
-                    }
-                }
+        double result = litres * price;
+        if (litres >= 20 && litres <= 25) {
+            result -= result * 0.08;
+        } else if (litres > 25) {
+            result -= result * 0.10;
         }
-        }
+        System.out.printf("%.2f lv.",result);
     }
-
-
-
-
+}
