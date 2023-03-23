@@ -10,6 +10,7 @@ public class FuelTank2 {
         String clubCard = scanner.nextLine();
         double price = 0;
         switch (fuelType) {
+
             case "Gas":
                 if (clubCard.equals("Yes")) {
                     price +=  0.85;
