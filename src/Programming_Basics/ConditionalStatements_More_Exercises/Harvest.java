@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Harvest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         int lozeArea = Integer.parseInt(scanner.nextLine());
         double grapeFromSqM = Double.parseDouble(scanner.nextLine());
         int wineForSale = Integer.parseInt(scanner.nextLine());

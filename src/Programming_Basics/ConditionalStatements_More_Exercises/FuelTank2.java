@@ -18,6 +18,7 @@ public class FuelTank2 {
                     price +=  0.93;
                 }
                 break;
+
             case "Gasoline":
                 if (clubCard.equals("Yes")) {
                     price +=  2.04;

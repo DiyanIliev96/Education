@@ -9,6 +9,7 @@ public class FuelTank1 {
         String fuelType = scanner.nextLine();
         int LitresInTank = Integer.parseInt(scanner.nextLine());
         switch (fuelType) {
+
             case "Diesel":
                 if (LitresInTank >= 25) {
                     System.out.println("You have enough diesel.");
@@ -16,6 +17,7 @@ public class FuelTank1 {
                     System.out.println("Fill your tank with diesel!");
                 }
                 break;
+
             case "Gasoline":
                 if (LitresInTank >= 25) {
                     System.out.println("You have enough gasoline.");
@@ -23,6 +25,7 @@ public class FuelTank1 {
                     System.out.println("Fill your tank with gasoline!");
                 }
                 break;
+
             case "Gas":
                 if (LitresInTank >= 25) {
                     System.out.println("You have enough gas.");
@@ -30,6 +33,7 @@ public class FuelTank1 {
                     System.out.println("Fill your tank with gas!");
                 }
                 break;
+
             default:
                 System.out.println("Invalid fuel!");
                 }
