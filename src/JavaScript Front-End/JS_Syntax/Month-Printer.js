@@ -14,7 +14,7 @@ function monthPrinter(month) {
             break;
         case 5:
             console.log('May');
-            break;        
+            break;
         case 6:
             console.log('June');
             break;
@@ -23,7 +23,19 @@ function monthPrinter(month) {
             break;
         case 8:
             console.log('August');
-            break        
+            break
+        case 9:
+            console.log('September');
+            break;
+        case 10:
+            console.log('October');
+            break;
+        case 11:
+            console.log('November');
+            break;
+        case 12:
+            console.log('December');
+            break;
         default:
             console.log('Error!')
             break;
